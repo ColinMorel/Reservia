@@ -104,7 +104,7 @@ h3 {
 
 /*Header du site*/
 
-.troisElements{
+.gridTroisElements{
 	width: 30%;
 	margin-right: 5%;
 	margin-top: 10px;
@@ -149,7 +149,8 @@ a:visited{
 }
 
 .barreRecherche{
-	width: 20%;	
+	display: flex;
+	align-items: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -206,8 +207,7 @@ a:visited{
 
 }
 
-.filtresAvecTexte{
-	
+.filtresAvecTexte{	
 	font-size: 1.5em;
 	font-weight: bold;
 	width: fit-content;
@@ -216,9 +216,7 @@ a:visited{
 	border:1px solid;	
 	border-color :#ECECEC ;
 	border-radius: 25px;
-	padding-right: 10px;
-	text-overflow: none;
-		
+	padding-right: 10px;	
 }
 
 /*Barre d'information*/
@@ -276,44 +274,13 @@ a:visited{
 	padding-top: 30px;
 	display: grid;
 	grid-template-columns: repeat(3, 3fr);
-    grid-template-rows: 1fr 50px 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-column-gap: 30px;
-}
-
-.cardHebergements:nth-child(6n+1){
-	grid-column-start:1;
-	grid-row:  1 / 2; 
-}
-
-.cardHebergements:nth-child(6n+2){
-	grid-column-start:2;
-	grid-row:  1 / 2; 
-}
-
-.cardHebergements:nth-child(6n+3){
-	grid-column-start:3;
-	grid-row:  1 / 2; 
-}
-
-.cardHebergements:nth-child(6n+4){
-	grid-column-start:1;
-	grid-row:  3 / 4; 
-}
-
-.cardHebergements:nth-child(6n+5){
-	grid-column-start:2;
-	grid-row:  3 / 4; 
-}
-
-.cardHebergements:nth-child(6n+6){
-	grid-column-start:3;
-	grid-row:  3 / 4; 
+	grid-row-gap: 50px;
+	
 }
 
 .cardHebergements{
-	max-height: 400px;
-	min-height: 100px;
-	max-width: 240px;
 	max-height: 200px;
 	height: auto;
 	border-radius: 20px 20px 20px 20px;
@@ -321,12 +288,16 @@ a:visited{
 	background-color: white;
 }
 
+.cardHebergements > div{
+	padding-left: 10px;
+}
+
 .imageHebergements{
+	box-sizing: border-box;
 	padding: 5px;
 	background-size: cover;
 	background-position: center;
-	max-width: 245px;
-	width:95%;
+	width:100%;
 	max-height: 125px;
 	height:80%;
 	max-height:60%;
@@ -338,7 +309,7 @@ a:visited{
 	margin-top: 5%;
 	display: grid;
 	grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
 	row-gap: 25px ;
 }
 
@@ -396,6 +367,10 @@ a:visited{
 
 /* Les Activites à Marseille*/
 
+.blocActivites{
+	margin-bottom: 50px;
+}
+
 .blocActivites h1{
 	padding-bottom: 20px;
 }
@@ -407,10 +382,9 @@ a:visited{
 .gridActivites{
 	display: grid;
 	max-height: 600px;
-	grid-template-columns: repeat(4, 4fr);
+	grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 50px 50px 1fr;
     grid-column-gap: 50px;
-	margin-bottom: 200px ;
 }
 
 .cardActivites{
@@ -473,21 +447,22 @@ a:visited{
 
 /* Pieds de page*/
 
-footer{
+footer{		
 	padding-left: 50px;
-	margin-left: 0;
-	margin-right: 0;
-	margin-top: 200px;
-	width: 100%;
-	display:flex;
-	flex-direction:row;
 	border:1px solid transparent;
 	background-color: #F2F2F2;
 }
 
-.footers{
-	margin-right: 20%;
-	justify-content:flex-start;
+footer ul{
+	list-style-type: none;
+}
+
+footer ul:not(:first-child){
+	padding-left: 20%;
+}
+
+footer ul li:not(:first-child){
+	padding-top: 10px;
 }
 
 .padding{
@@ -495,84 +470,133 @@ footer{
 	padding-right: 5%;
 }
 
-@media screen and (max-width: 1410px)/*breakpoint Extra Large (Filtres & Hebergements)*/{
-	  
-	.gridHebergements{
-		grid-template-columns: repeat(2, 2fr);
-		grid-template-rows: 1fr 50px 1fr 50px 1fr;
-		grid-column-gap: 30px;
-		min-width: fit-content;
-		max-width: 80% ;
-		max-height: 80%;
-		justify-content: center;
-	}
-	.gridHebergements .cardHebergements:nth-child(6n+1){
-		grid-column-start:1;
-		grid-row:  1 / 2; 
-	}	
-	.gridHebergements .cardHebergements:nth-child(6n+2){
-		grid-column-start:2;
-		grid-row:  1 / 2; 
-	}	
-	.gridHebergements .cardHebergements:nth-child(6n+3){
-		grid-column-start:1;
-		grid-row:  3 / 4; 
-	}
-	.gridHebergements .cardHebergements:nth-child(6n+4){
-		grid-column-start:2;
-		grid-row:  3 / 4; 
-	}	
-	.gridHebergements .cardHebergements:nth-child(6n+5){
-		grid-column-start:1;
-		grid-row:  5 / 6; 
-	}	
-	.gridHebergements .cardHebergements:nth-child(6n+6){
-		grid-column-start:2;
-		grid-row:  5 / 6; 
-	}
-
-
-}
-
-@media screen and (max-width: 1280px)/*breakpoint Largeur Ipad*/ {
+@media screen and (max-width: 1410px)/*breakpoint Largeur Ipad*/ {
 	.mainbloc {
 		display: flex;
 		flex-direction: column;
 		justify-content: start;
 	}
 	.mainbloc .blocPopulaires{order : 1;}
+
 	.mainbloc .blocHebergements{
 		order:2;
 	}
-
 	.gridPopulaires{
 		grid-template-columns: repeat(3,1fr);
 		grid-column-gap: 30px;
 		grid-template-rows: 1fr;
+	}	
+	.cardHebergements {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1162px)/*breakpoint Extra Large (Filtres & Hebergements)*/{
+	  
+	.gridHebergements{
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 30px;
+		grid-template-rows: repeat(3,1fr);				
+	}
+	
+	.gridPopulaires{
+		grid-template-rows: repeat(3,1fr);
+		grid-row-gap: 30px;
+		grid-template-columns: 1fr;
 	}
 
-	.cardPopulaires:nth-child(3n+1){
-		grid-column-start:1;	
+	.gridPopulaires img{
+		width: 30%;
+	}
+	.gridActivites{
+		grid-template-columns: repeat(3,1fr);
+		grid-template-rows: repeat(2,1fr);
+		grid-row-gap: 30px;
 	}
 
-	.cardPopulaires:nth-child(3n+2){
-		grid-column-start:2;	
+	.cardActivites img{
+		height: 100px;
 	}
 
-	.cardPopulaires:nth-child(3n+3){
-		grid-column-start:3;		 
+	.cardActivites h3{
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+
+	.cardActivites:nth-child(6n+1){
+		grid-column:1;
+		grid-row:1; 
+	}
+	
+	.cardActivites:nth-child(6n+2){
+		grid-column:2;
+		grid-row: 1;
+	
+	}
+	
+	.cardActivites:nth-child(6n+3){
+		grid-column:3;
+		grid-row: 1;
+	}
+	
+	.cardActivites:nth-child(6n+4){
+		grid-column:1;
+		grid-row:2; 
+	}
+	
+	.cardActivites:nth-child(6n+5){
+		grid-column:2;
+		grid-row: 2; 
+	}
+	
+	.cardActivites:nth-child(6n+6){
+		grid-column:3;
+		grid-row:2; 
 	}
 }
 
 @media screen and (max-width: 1024px)/*breakpoint Large*/ {
+	.gridActivites{
+		grid-template-columns: repeat(2,1fr);
+		grid-template-rows: repeat(3,1fr);
+		grid-row-gap: 30px;
+	}
+	.cardActivites img{
+		height: 100px;
+	}
+
+	.cardActivites:nth-child(6n+1){
+		grid-column:1;
+		grid-row:1; 
+	}
 	
-	.mainbloc {
-		display: flex;
-		flex-direction: column;
-		justify-content: start;
+	.cardActivites:nth-child(6n+2){
+		grid-column:2;
+		grid-row: 1;
+	
 	}
-	.mainbloc .blocPopulaires{order : 1;}
-	.mainbloc .blocHebergements{
-		order:2;
+	
+	.cardActivites:nth-child(6n+3){
+		grid-column:1;
+		grid-row: 2;
 	}
+	
+	.cardActivites:nth-child(6n+4){
+		grid-column:2;
+		grid-row:2; 
+	}
+	
+	.cardActivites:nth-child(6n+5){
+		grid-column:1;
+		grid-row: 3; 
+	}
+	
+	.cardActivites:nth-child(6n+6){
+		grid-column:2;
+		grid-row:3; 
+	}
+}
+
+footer{
+	padding-left:20px;
 }
