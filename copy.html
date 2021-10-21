@@ -10,33 +10,32 @@
 	</head> 
 
 	<body>
-		<header class="margin">
-			<nav class="gridHeader">
+		<header class="padding">
+			<nav class="gridHeader spBetween">
 				<img class="headerLogo" src="images/logo/Reservia.png" title="Logo"/>
 				<div class="headerNav">
-					<a class ="active" href="#hosting">Hébergements</a>			
-					<a class ="active" href="#activity">Activités</a>					
+					<a href ="#hosting">Hébergements</a>			
+					<a href="#activity">Activités</a>
+					<a class="inscription" href="#">S'inscrire</a>			
 				</div>
-				<a class ="inscription" href="#">S'inscrire</a>
 			</nav>
-		</header> 
+		</header>
 
 		<main>
 	<!-- Barre de Recherche-->
-			<section class="intro margin">
+			<section class="intro padding">
 				<h1> Trouvez votre hébergement pour des vacances de rêve </h1>
 				<p>En plein centre ville ou en pleine nature</p>
 				<div class ="barreRecherche">	
 					<div><i class="mapIcon centre fas fa-map-marker-alt "></i></div>
-					<div><input class="rechercheEcriture" type ="search" placeholder="Marseille, France"></div>
-					<div class="rechercheBouton"><strong>Rechercher</strong></div>
-					<div><i class=" rechercheIcone fas fa-search"></i></div>						
+					<div><input class="rechercheEcrire centre " type ="search" placeholder="Marseille, France"></div>
+					<div class="rechercheBouton"><strong>Rechercher</strong></div>	
 				</div>
 
 			</section>
 
 	<!-- Filtres de recherche-->
-			<section class="margin">
+			<section class="padding">
 				<div class ="filtres">
 					<h2 class="filtresTitre">Filtres</h2>
 					<div class="filtresListe">
@@ -62,16 +61,16 @@
 
 	<!--Ligne Information-->
 			<section>
-				<div class ="infoContainer centre margin">
+				<div class ="infoContainer centre padding">
 					<div><i class=" bleu centre infoIcon fas fa-info"></i></div>
 					<div>Plus de 500 logements sont disponibles dans cette ville</div>
 				</div>
 			</section>
 
 	<!-- Hebergements + Populaires-->
-			<section Class=" mainbloc fxRowAround margin">
-				<div id="hosting" class ="blocHebergements">	
-					<h2 class="titresBlocs">Hébergements à Marseille</h2>
+			<section Class=" mainbloc fxRowAround padding">
+				<div id="hosting" class ="blocHebergements ">	
+					<h1 class="titresBlocs">Hébergements à Marseille</h1>
 					<div class="gridHebergements">	
 						<div class ="cardHebergements">
 							<img class="imageHebergements" src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" title="Auberge la Cannebière" />
@@ -134,12 +133,12 @@
 							</div>
 						</div>
 					</div>		
-					<h3>Afficher plus</h3>
+					<h2>Afficher plus</h2>
 				</div>
 				
 				<div class="blocPopulaires  ">
 					<div class="titresBlocs">
-						<h2>Les plus populaires</h2>
+						<h1>Les plus populaires</h1>
 						<i class="fas fa-chart-line"></i>
 					</div>
 					<div class="gridPopulaires">
@@ -185,30 +184,30 @@
 
 	<!--Activites à Marseille-->
 			<section id ="activity" class="blocActivites">
-				<h2 class="margin"> Activités à Marseille</h2>		
-				<div class="gridActivites margin">				
+				<h1 class="padding"> Activités à Marseille</h1>		
+				<div class="gridActivites padding ">				
 					<div class="cardActivites">
-						<img class="imageActivitesGrande" src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" title="Vieux Port" />
+						<img class="imageActivitesGrande" src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" title="Vieux Port" />
 						<h3>Vieux Port</h3>
 					</div>					
 					<div class="cardActivites">  
-						<img class="imageActivitesPetite" src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" title="Port de Pomègues" />
+						<img class="imageActivitesPetite" src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" title="Port de Pomègues" />
 						<h3>Port de Pomègues</h3>							
 					</div>
 					<div class="cardActivites">  
-						<img class="imageActivitesPetite" src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" title="Îles du Frioul" />
+						<img class="imageActivitesPetite" src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" title="Îles du Frioul" />
 						<h3>Îles du Frioul</h3>							
 					</div>	
 					<div class="cardActivites">  
-						<img class="imageActivitesGrande" src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" title="Parc Nationale des Calanques" />
+						<img class="imageActivitesGrande" src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" title="Parc Nationale des Calanques" />
 						<h3>Parc Nationale des Calanques</h3>
 					</div>			
 					<div class="cardActivites">  
-						<img class="imageActivitesPetite" src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" title="Notre-Dame-de-la-Gare" />
+						<img class="imageActivitesPetite" src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" title="Notre-Dame-de-la-Gare" />
 						<h3>Notre-Dame-de-la-Gare</h3>							
 					</div>
 					<div class="cardActivites">  
-						<img class="imageActivitesPetite" src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" title="Parc Longchamp" />
+						<img class="imageActivitesPetite" src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" title="Parc Longchamp" />
 						<h3>Parc Longchamp</h3>							
 					</div>						
 				</div>			
@@ -216,31 +215,29 @@
 		</main>
 	
 
-		<footer>
-			<div class="margin">
-				<div>
-					<h3>A propos</h3>
-					<ul>
-						<li><a href="#">Fonctionnement du site</a></li>
-						<li><a href="#">Conditions générales de vente</a></li>
-						<li><a href="#">Données et confidentialité</a></li>
-					</ul>	
-				</div>
+		<footer class="fxRowAround padding">
+			<div>
+				<h3>A propos</h3>
+				<ul>
+					<li>Fonctionnement du site</li>
+					<li>Conditions générales de vente</li>
+					<li>Données et confidentialité</li>
+				</ul>	
+			</div>
 
-				<div>
-					<h3>Nos hébergements</h3>
-					<ul>
-						<li><a href="#">Charte qualité</a></li>
-						<li><a href="#">Soumettre votre hôtel</a></li>
-					</ul>
-				</div>
-				<div>
-					<h3>Assistance</h3>
-					<ul>
-						<li><a href="#">Centre d'aide</a></li>
-						<li><a href="#">Nous contacter</a></li>
-					</ul>	
-				</div>
+			<div>
+				<h3>Nos hébergements</h3>
+				<ul>
+					<li>Charte qualité</li>
+					<li>Soumettre votre hôtel</li>
+				</ul>
+			</div>
+			<div>
+				<h3>Assistance</h3>
+				<ul>
+					<li>Centre d'aide</li>
+					<li>Nous contacter</li>
+				</ul>	
 			</div>
 		</footer>
 	</body>
