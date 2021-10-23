@@ -136,13 +136,13 @@ header{
 	gap: 16px;
 }
 
-.gridHeader{
+.blocHeader{
 	align-items: flex-end;
 	display: flex; 
 	justify-content: flex-end;
 }
 
-.gridHeader a{
+.blocHeader a{
 	padding: 24px 24px 16px;
 	border-top: solid 3px transparent;
 }
@@ -156,7 +156,7 @@ header{
 	border-top-color: #0065FC;
 }
 
-.gridHeader a:link{
+.blocHeader a:link{
 	text-decoration:none;
 }
 
@@ -240,6 +240,10 @@ header{
 	padding-bottom: calc(var(--heigth)/2);
 }
 
+.filtresAvecTexte:hover{
+	transform: scale(1.2);
+}
+
 .filtresLogos{
 	color: #0065FC;
 	height: 41px;
@@ -281,6 +285,10 @@ header{
 	width: 450px;
 }
 
+.infoContainer h1{
+	font-weight: 200;
+	font-size: medium;
+}
 /*Les Hebergements à Marseille, dont les plus populaires*/
 
 .blocHebergements h3{
@@ -618,8 +626,17 @@ footer ul li{
 	}
 }
 
-@media screen and (max-width: 1024px)/*breakpoint Large*/ {
+@media screen and (max-width: 1024px)/*breakpoint Large Tablette Portrait*/ {
 
+	main{
+		margin-bottom: 0;
+	}
+
+	.blocHeader a{
+		padding: 24px 24px 16px;
+		border-top: solid 3px transparent;
+	}
+	
 	.gridActivites{
 		grid-template-columns: repeat(2,1fr);
 		grid-template-rows: repeat(3,1fr);
@@ -667,12 +684,12 @@ footer ul li{
 	}
 	/* header*/
 
-	.gridHeader{
+	.blocHeader{
 		position: relative;
 		flex-direction: column;	
 	}
 
-	.gridHeader a{
+	.blocHeader a{
 		font-size: 20px ;
 		border-bottom: solid 3px transparent;
 	}
@@ -719,8 +736,19 @@ footer ul li{
 		margin-left: 50px;
 	}
 
-	.barreRecherche {
+	.barreRecherche{
 		width: 100%;
+	}
+	.rechercheEcriture {
+		width: 70%;
+		font-size: 30px;
+		font-weight: 100;
+		font-style: normal;
+	}
+
+	::placeholder{
+		font-size:30px;
+		font-weight:400;
 	}
 
 	.rechercheBouton{
